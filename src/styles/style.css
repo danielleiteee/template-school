@@ -26,13 +26,14 @@ body {
 }
 
 header {
-  border: 1px;
   height: 100px;
   border: 1px solid black;
-  display: flex;
+  display: grid;
   justify-content: space-between;
+  /* justify-items: center; */
   align-items: center;
   padding: 0 94px;
+  grid-template-columns: auto auto auto;
 }
 
 header > h1 {

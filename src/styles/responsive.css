@@ -1,5 +1,9 @@
 @media (max-width: 1070px) {
-  header > h1 {
-    display: none;
+  header {
+    display: grid;
+    grid-template-areas:
+      "h1"
+      "nav"
+      "button";
   }
 }
