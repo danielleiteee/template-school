@@ -389,3 +389,10 @@ footer > .links {
 .footer-section > button:active {
   box-shadow: none;
 }
+
+/* @media (max-width: 1070px) {
+  header {
+    display: grid;
+    grid-template-columns: auto;
+  }
+} */
