@@ -224,6 +224,8 @@ section {
 
 section > .container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 30px;
   margin-top: -100px;
 }
@@ -390,9 +392,27 @@ footer > .links {
   box-shadow: none;
 }
 
-/* @media (max-width: 1070px) {
+@media (max-width: 1070px) {
   header {
     display: grid;
     grid-template-columns: auto;
+    height: auto;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 10px;
   }
-} */
+
+  section > .container {
+    display: grid;
+    grid-template-columns: auto auto;
+    /* flex-direction: column; */
+    height: auto;
+  }
+
+  section {
+    height: auto;
+    padding-bottom: 30px;
+  }
+}
