@@ -409,6 +409,10 @@ footer > .links {
     grid-template-columns: auto auto;
     /* flex-direction: column; */
     height: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
   }
 
   section {
