@@ -47,14 +47,13 @@ nav > a {
   font-size: 20px;
   font-family: "Academy Engraved LET", sans-serif;
   color: black;
+  position: relative;
 }
 
 nav > a::after {
   content: "";
-  height: 0px;
   width: 0px;
   background: #000;
-  display: block;
   transition: 0.2s;
 }
 
@@ -62,7 +61,7 @@ nav > a:hover:after {
   width: 100%;
   display: block;
   height: 1px;
-  position: relative;
+  position: absolute;
 }
 
 header > button {
@@ -86,7 +85,8 @@ nav {
 
 main {
   width: 100%;
-  height: 1100px;
+  height: auto;
+  padding: 20px 0 200px 0;
   border: 1px solid black;
   display: flex;
   align-items: center;
@@ -277,6 +277,7 @@ footer {
   justify-content: center;
   gap: 120px;
   border: 1px solid black;
+  padding: 0 20px;
 }
 
 footer > .description {
@@ -359,7 +360,9 @@ footer > .links {
 }
 
 .footer-section > input {
-  width: 560px;
+  max-width: 560px;
+  flex-grow: 1;
+  flex-shrink: 1;
   height: 48px;
   border: 2px solid black;
   box-shadow: 4px 4px black;
@@ -392,6 +395,49 @@ footer > .links {
   box-shadow: none;
 }
 
+@media (max-width: 1310px) {
+  span > h2 {
+    width: auto;
+  }
+  span > p {
+    width: auto;
+    /* text-align: center; */
+  }
+
+  section > .container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* grid-template-rows: auto auto; */
+    height: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .bateria {
+    grid-column: 2;
+  }
+
+  section {
+    height: auto;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 1040px) {
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  main > span {
+    padding: 0;
+    /* align-items: center;
+    justify-content: center; */
+  }
+}
+
 @media (max-width: 1070px) {
   header {
     display: grid;
@@ -418,5 +464,138 @@ footer > .links {
   section {
     height: auto;
     padding-bottom: 30px;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: auto;
+    padding: 30px;
+  }
+
+  footer > .links {
+    height: auto;
+  }
+
+  .footer-section {
+    width: auto;
+  }
+}
+
+@media (max-width: 725px) {
+  span > h2 {
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+
+  span > p {
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+
+  .heroTextContainer > img {
+    width: auto;
+    height: auto;
+  }
+
+  main > span {
+    width: auto;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  .heroTextContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer > .description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 680px) {
+  main > span > h2 {
+    font-size: 48px;
+  }
+
+  .heroTextContainer > p {
+    font-size: 48px;
+  }
+
+  .heroTextContainer > img {
+    font-size: 48px;
+  }
+
+  main > span > p {
+    font-size: 20px;
+  }
+
+  section > .container {
+    grid-template-columns: auto;
+  }
+
+  section > p {
+    font-size: 40px;
+  }
+
+  section > p > span {
+    font-size: 40px;
+  }
+
+  .card-yellow {
+    margin-left: 10px;
+  }
+
+  .bateria {
+    grid-column: auto;
+  }
+
+  footer {
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    gap: 70px;
+  }
+
+  footer > .links {
+    align-items: center;
+  }
+
+  .description > p {
+    font-size: 16px;
+  }
+
+  .links > a {
+    font-size: 20px;
+  }
+
+  section > p {
+    width: auto;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .footer-section {
+    align-items: center;
+  }
+
+  .footer-section > p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 610px) {
+  nav {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
   }
 }
